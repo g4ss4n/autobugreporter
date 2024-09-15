@@ -1,16 +1,21 @@
-// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
+import Dashboard from './pages/Dashboard';
+import Recording from './pages/Recording';
+import ManualReport from './pages/ManualReport';
+import Navbar from './components/Navbar'; // Import the Navbar component
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <div>
+        <Navbar /> {/* Include the Navbar component */}
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/recording" element={<Recording />} />
+          <Route path="/manual-report" element={<ManualReport />} />
+        </Routes>
+      </div>
     </Router>
   );
 };

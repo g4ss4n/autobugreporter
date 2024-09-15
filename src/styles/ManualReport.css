@@ -1,0 +1,115 @@
+.manual-report {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.manual-report h1 {
+    text-align: center;
+    color: #2185D5; /* Main color */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 50px; /* Space for the icon */
+    border: 1px solid #303841; /* Input border color */
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #FFFFFF; /* Input background color */
+}
+
+.form-input:focus {
+    border-color: #2185D5; /* Focus border color */
+    box-shadow: 0 0 8px rgba(33, 133, 213, 0.25); /* Focus box-shadow */
+    outline: none;
+}
+
+textarea.form-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.generate-button, .publish-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.generate-button {
+    background-color: #2185D5; /* Main color */
+}
+
+.publish-button {
+    background-color: #3A4750; /* Secondary color */
+}
+
+.generate-button:hover, .publish-button:hover {
+    opacity: 0.9;
+}
+
+.copy-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #2185D5; /* Icon color */
+    transition: color 0.3s;
+}
+
+.copy-icon:hover {
+    color: #1A5F8F; /* Darker shade for hover effect */
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3A4750; /* Icon color */
+}
+
+.copy-success {
+    color: #2185D5; /* Success message color */
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .form-input {
+        padding-left: 40px; /* Adjust for smaller screens */
+    }
+
+    .generate-button, .publish-button {
+        width: 100%;
+    }
+}

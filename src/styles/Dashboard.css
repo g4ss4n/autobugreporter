@@ -1,0 +1,98 @@
+/* Dashboard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3F3F3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* General Styling for the Dashboard Container */
+.dashboard {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #FFFFFF; /* Clean white background for main content */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard:hover {
+    transform: translateY(-5px); /* Lift on hover for a 3D effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard h1 {
+    color: #2185D5; /* Bright header color */
+    font-size: 2.5rem; /* Larger heading for prominence */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.dashboard p {
+    color: #303841;
+    font-size: 1.125rem; /* Slightly larger font for readability */
+    margin-bottom: 30px;
+    line-height: 1.6; /* Increased line height for better spacing */
+}
+
+/* Option Buttons */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #2185D5; /* Primary button color */
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.btn:hover {
+    background-color: #1A73E8; /* Darker hover color */
+    transform: translateY(-3px); /* Lift button slightly on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+}
+
+.btn:active {
+    transform: translateY(0); /* Button returns to position on click */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 30px;
+    }
+
+    .dashboard h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard p {
+        font-size: 1rem;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+}
